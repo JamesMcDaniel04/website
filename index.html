@@ -1,0 +1,398 @@
+# Create the main index.html file
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James McDaniel - Lead Project Dev & Serial Entrepreneur</title>
+    <meta name="description" content="Portfolio of James McDaniel, Lead Project Developer and Serial Entrepreneur, founder of Floor (app)">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-blue-600">James McDaniel</div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-blue-600 font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden py-4 border-t border-gray-200 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-8">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <img 
+                        src="https://i.imgur.com/YourImageHere.jpg" 
+                        alt="James McDaniel"
+                        class="w-full h-full object-cover"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+                    />
+                    <div class="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold" style="display: none;">
+                        JM
+                    </div>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-bold mb-4">
+                    Hi, I'm <span class="text-blue-600">James McDaniel</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-600 mb-8">
+                    Lead Project Dev & Serial Entrepreneur
+                </p>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+                    Founder of Floor (app) - award-winning social networking platform for niche professionals. 
+                    Featured on Forbes for investing in minority founders and building inclusive tech communities.
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    View My Work
+                </a>
+                <a href="#contact" class="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/JamesMcDaniel04" class="text-gray-600 hover:text-blue-600 transition-colors">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+                <a href="https://linkedin.com/in/flio" class="text-gray-600 hover:text-blue-600 transition-colors">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+                <a href="mailto:james@joinfloor.app" class="text-gray-600 hover:text-blue-600 transition-colors">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+            </div>
+
+            <div class="mt-16 animate-bounce">
+                <i data-lucide="chevron-down" class="w-8 h-8 mx-auto text-gray-400"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Hello! I'm James</h3>
+                    <p class="text-gray-600 mb-4">
+                        I'm a Lead Project Developer and serial entrepreneur, currently building Floor (app) - 
+                        an exclusive discovery platform for niche tech professionals. My passion lies in creating 
+                        innovative solutions that connect communities and drive meaningful impact.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Floor was recognized as one of the top 39 social networking startups in 2024, and I was 
+                        featured on Forbes in 2020 for my work investing in minority founders. I'm committed to 
+                        building inclusive technology that creates opportunities for underrepresented communities 
+                        in tech.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        As a Senior Flutter Developer with expertise in mobile development, AI integration, and 
+                        community building, I enjoy working at the intersection of technology and social impact.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold mb-2">🎓 Education</h4>
+                        <p class="text-gray-600">University of Colorado Boulder - Engineering</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold mb-2">💼 Experience</h4>
+                        <p class="text-gray-600">Lead Project Dev @ Floor (app) | Sr. Flutter Developer</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold mb-2">🏆 Recognition</h4>
+                        <p class="text-gray-600">Forbes 2020 | Top 39 Social Startups 2024</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-semibold mb-2">🌍 Location</h4>
+                        <p class="text-gray-600">Denver, Colorado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Floor App - Featured -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow ring-2 ring-blue-500">
+                    <div class="bg-gradient-to-br from-purple-600 to-blue-600 h-48 flex items-center justify-center text-white text-2xl font-bold relative">
+                        <span class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-2 py-1 rounded text-sm font-medium">Featured</span>
+                        Floor
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Floor (app)</h3>
+                        <p class="text-gray-600 mb-4">Award-winning social networking platform for niche tech professionals with video/audio chat lobbies and exclusive opportunities</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Flutter</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Dart</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Firebase</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Real-time Chat</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://www.joinfloor.app/" class="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors" target="_blank">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/JamesMcDaniel04" class="flex items-center gap-1 text-gray-600 hover:text-gray-800 transition-colors" target="_blank">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Video Processor -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 h-48 flex items-center justify-center text-white text-2xl font-bold">
+                        AI
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">AI Video Processor</h3>
+                        <p class="text-gray-600 mb-4">Sophisticated AI-powered video content detection system using Twelve Labs' multimodal video understanding API</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Python</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">AI/ML</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Video Processing</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/JamesMcDaniel04/AI_Video_Processor" class="flex items-center gap-1 text-gray-600 hover:text-gray-800 transition-colors" target="_blank">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emoji Factory -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 h-48 flex items-center justify-center text-white text-2xl font-bold">
+                        Emoji
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Emoji Factory</h3>
+                        <p class="text-gray-600 mb-4">Cross-platform Flutter application demonstrating Branch SDK integration with creature creation and sharing</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Flutter</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Branch SDK</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/JamesMcDaniel04/Emoji_Factory" class="flex items-center gap-1 text-gray-600 hover:text-gray-800 transition-colors" target="_blank">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills & Technologies</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">💻</span>
+                        <h3 class="text-lg font-semibold">Frontend Development</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">Flutter</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">Dart</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">React</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">🧠</span>
+                        <h3 class="text-lg font-semibold">Backend & AI</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">Python</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">Firebase</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">AI/ML</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">Video Processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">🚀</span>
+                        <h3 class="text-lg font-semibold">Entrepreneurship</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">Product Development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">Team Leadership</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">Community Building</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="text-gray-700">Fundraising</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12">Get In Touch</h2>
+            <p class="text-lg text-gray-600 mb-8">
+                I'm always open to discussing new opportunities and interesting projects.
+                Let's connect and create something amazing together!
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
+                    <i data-lucide="mail" class="w-8 h-8 mx-auto mb-4 text-blue-600"></i>
+                    <h3 class="font-semibold mb-2">Email</h3>
+                    <p class="text-gray-600">james@joinfloor.app</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
+                    <i data-lucide="linkedin" class="w-8 h-8 mx-auto mb-4 text-blue-600"></i>
+                    <h3 class="font-semibold mb-2">LinkedIn</h3>
+                    <p class="text-gray-600">linkedin.com/in/flio</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
+                    <i data-lucide="github" class="w-8 h-8 mx-auto mb-4 text-blue-600"></i>
+                    <h3 class="font-semibold mb-2">GitHub</h3>
+                    <p class="text-gray-600">github.com/JamesMcDaniel04</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:james@joinfloor.app" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    Send Email
+                </a>
+                <a href="https://linkedin.com/in/flio" target="_blank" class="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-4">© 2025 James McDaniel. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/JamesMcDaniel04" class="hover:text-blue-400 transition-colors">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+                <a href="https://linkedin.com/in/flio" class="hover:text-blue-400 transition-colors">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="mailto:james@joinfloor.app" class="hover:text-blue-400 transition-colors">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Simple navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for navigation links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+EOF
